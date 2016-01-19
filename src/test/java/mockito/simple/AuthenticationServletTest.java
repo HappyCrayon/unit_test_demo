@@ -45,9 +45,11 @@ public class AuthenticationServletTest {
     @Test
     public void should_forward_to_login() throws ServletException, IOException {
         new Expectations() {{
-            request.getParameter("name");result = "foo";
-            request.getParameter("password");result = "bar";
-            dao.isValid("foo","bar");result = false;
+                request.getParameter("name");result = "foo";
+                request.getParameter("password");result = "bar";
+                dao.isValid("foo", "bar");result = false;
+        }};
+        
         servlet.doPost(request, response);
 
         new Verifications() {{
