@@ -47,7 +47,7 @@ public class AuthenticationServletTest {
         new Expectations() {{
             request.getParameter("name");result = "foo";
             request.getParameter("password");result = "bar";
-            dao.isValid("foo","bar");result = fals
+            dao.isValid("foo","bar");result = false;
         servlet.doPost(request, response);
 
         new Verifications() {{
