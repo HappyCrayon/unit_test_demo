@@ -1,4 +1,4 @@
-package mockito.simple;
+package jmockit.simple;
 
 import mockit.*;
 import org.junit.Test;
@@ -28,7 +28,7 @@ public class AuthenticationServletTest {
 
 
     @Test
-    public void should_forward_to_home() throws ServletException, IOException {
+    public void should_forward_to_home_when_login_succeed() throws ServletException, IOException {
         new Expectations() {{
             request.getParameter("name");result = "yoogo";
             request.getParameter("password");result = "yoogo";
@@ -43,7 +43,7 @@ public class AuthenticationServletTest {
     }
 
     @Test
-    public void should_forward_to_login() throws ServletException, IOException {
+    public void should_forward_to_login_when_login_failed() throws ServletException, IOException {
         new Expectations() {{
                 request.getParameter("name");result = "foo";
                 request.getParameter("password");result = "bar";

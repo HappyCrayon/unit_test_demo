@@ -1,4 +1,4 @@
-package mockito.simple;
+package jmockit.simple;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

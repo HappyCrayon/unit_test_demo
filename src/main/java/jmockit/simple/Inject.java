@@ -1,4 +1,4 @@
-package mockito.simple;
+package jmockit.simple;
 
 /**
  * Created by Yonggao.Dong on 16/1/18.
