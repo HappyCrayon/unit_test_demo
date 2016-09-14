@@ -65,7 +65,6 @@ public class AuthenticationServletTest {
         new Expectations(servlet){{
 //            servlet.doRequest(request,response); private 的,无法直接调用;
             Deencapsulation.invoke(servlet,"doRequest",request,response);
-
         }};
 
         servlet.doGet(request,response);
