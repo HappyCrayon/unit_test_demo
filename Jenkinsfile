@@ -14,4 +14,5 @@ node {
    stage 'Build'
    // Run the maven build
    sh "${mvnHome}/bin/mvn clean install"
+
 }
