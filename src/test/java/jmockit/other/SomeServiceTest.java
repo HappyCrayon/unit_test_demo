@@ -3,13 +3,16 @@ package jmockit.other;
 import jmockit.other.inner.ADao;
 import jmockit.other.inner.BDao;
 import jmockit.other.inner.MailSenter;
-import mockit.*;
+import mockit.Injectable;
+import mockit.Mocked;
+import mockit.Tested;
+import mockit.Verifications;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
- * Created by Yonggao.Dong on 16/9/13.
+ * Created by twer on 2017/6/1.
  */
 public class SomeServiceTest {
 
@@ -22,43 +25,20 @@ public class SomeServiceTest {
     @Injectable
     BDao bDao;
 
-    @Test
-    public void show_static_mock(@Mocked final MailSenter mailSenter) throws Exception {
+    @Mocked
+    MailSenter mailSenter;
 
+
+    @Test
+    public void should_update_A_delete_B_and_sendMail(){
 
         someService.doSome();
 
-        new Verifications() {{
+        new Verifications(){{
             aDao.update();
             bDao.delete();
             MailSenter.sendMail();
         }};
+
     }
-
-
-
-    @Test
-    public void show_diff_between_mocked_and_injectable(@Mocked final ADao aDao,@Injectable final BDao bDao){
-        new Expectations(){{
-            aDao.update();result=1;
-            bDao.delete();result=1;
-        }};
-
-        assertEquals(1,aDao.update());
-        assertEquals(1,bDao.delete());
-
-
-        final ADao aDao1 = new ADao();
-        final BDao bDao1 = new BDao();
-
-        new Expectations(){{
-            aDao1.update();result=2;
-            bDao1.delete();result=2;
-        }};
-
-        assertEquals(2,aDao1.update());
-        assertEquals(100,bDao1.delete());
-    }
-
-
 }
