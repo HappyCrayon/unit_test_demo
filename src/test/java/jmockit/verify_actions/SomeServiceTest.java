@@ -1,15 +1,13 @@
-package jmockit.other;
+package jmockit.verify_actions;
 
-import jmockit.other.inner.ADao;
-import jmockit.other.inner.BDao;
-import jmockit.other.inner.MailSenter;
+import jmockit.verify_actions.inner.ADao;
+import jmockit.verify_actions.inner.BDao;
+import jmockit.verify_actions.inner.MailSenter;
 import mockit.Injectable;
 import mockit.Mocked;
 import mockit.Tested;
 import mockit.Verifications;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by twer on 2017/6/1.

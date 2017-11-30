@@ -1,4 +1,4 @@
-package jmockit.simple;
+package jmockit.servlet;
 
 import mockit.*;
 import org.junit.Test;

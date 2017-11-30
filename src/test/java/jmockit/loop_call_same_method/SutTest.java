@@ -1,4 +1,4 @@
-package jmockit.records;
+package jmockit.loop_call_same_method;
 
 import mockit.Expectations;
 import mockit.Mocked;

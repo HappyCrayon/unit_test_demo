@@ -1,4 +1,4 @@
-package jmockit.other.inner;
+package jmockit.verify_actions.inner;
 
 /**
  * Created by Yonggao.Dong on 16/9/13.

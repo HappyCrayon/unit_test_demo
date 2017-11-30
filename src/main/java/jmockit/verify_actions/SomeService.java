@@ -1,8 +1,8 @@
-package jmockit.other;
+package jmockit.verify_actions;
 
-import jmockit.other.inner.ADao;
-import jmockit.other.inner.BDao;
-import jmockit.other.inner.MailSenter;
+import jmockit.verify_actions.inner.ADao;
+import jmockit.verify_actions.inner.BDao;
+import jmockit.verify_actions.inner.MailSenter;
 
 /**
  * Created by Yonggao.Dong on 16/9/13.
