@@ -1,13 +1,11 @@
-package unit.simple;
+package junit.simple;
 
 /**
  * Created by Yonggao.Dong on 15/9/7.
  */
 public class Accumulator {
 
-
     public int accumulate(int input) throws NumberOutOfBoundException {
-        String s;
         if (input > 1000 || input < 0)
             throw new NumberOutOfBoundException("输入参数的范围必须在[0,1000]范围之内");
         int sum = 0;
