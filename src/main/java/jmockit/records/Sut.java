@@ -10,17 +10,17 @@ public class Sut {
 
     public String doSomething() {
         int n = abc.intReturningMethod();
-        String s = "";
+        StringBuilder s = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
 
             try {
-                s += abc.stringReturningMethod();
+                s.append(abc.stringReturningMethod());
             } catch (SomeCheckedException e) {
                 return s + "exception";
             }
 
         }
-        return s;
+        return s.toString();
     }
 }
