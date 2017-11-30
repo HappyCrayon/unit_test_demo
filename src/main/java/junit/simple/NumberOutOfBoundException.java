@@ -1,4 +1,4 @@
-package unit.simple;
+package junit.simple;
 
 public class NumberOutOfBoundException extends Exception {
 
