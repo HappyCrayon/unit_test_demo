@@ -1,3 +1,6 @@
 .idea/
 *.iml
+
 target
+
+s101plugin.state
